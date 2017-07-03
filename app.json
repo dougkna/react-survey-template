@@ -1,0 +1,22 @@
+{
+  "name": "survey-app",
+  "description": "React + MongoDB Survey App on react-webpack-boilerplate",
+  "keywords": [
+    "react",
+    "boilerplate",
+    "survey"
+  ],
+  "website": "",
+  "repository": "https://github.com/srn/react-webpack-boilerplate",
+  "logo": "",
+  "env": {
+    "NODE_ENV": {
+      "description": "Set the `NODE_ENV` environment variable to `production` to disable debugging etc.",
+      "value": "production"
+    },
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "By default Heroku is not installing `devDependencies`, so let's do that.",
+      "value": "false"
+    }
+  }
+}

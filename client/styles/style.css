@@ -1,0 +1,26 @@
+body {
+  margin-top: 0;
+  background-color: #e3eaf2;
+}
+
+.auth {
+  padding-top: 120px;
+  margin: auto;
+  width: 70%;
+}
+
+.navbar .container {
+  width: 100%;
+}
+
+.question {
+  font-size: 1.1em;
+}
+
+.answer .form-group label {
+  display: block;
+}
+
+.answer .form-group label:nth-child(1) {
+  margin-left: 10px;
+}

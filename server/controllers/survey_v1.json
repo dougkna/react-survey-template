@@ -1,0 +1,84 @@
+{
+  "z_fashion_v1" :
+  [
+    {
+      "number": 1,
+      "type": "radio",
+      "text": "How often do you shop online?",
+      "possible_answers": 
+      [
+        "Very often",
+        "Quite often",
+        "Moderately often",
+        "Slightly often",
+        "Rare"
+      ] 
+    },
+    {
+      "number": 2,
+      "type": "multi",
+      "text": "What do you look for when you buy online?",
+      "possible_answers": 
+      [
+        "Cheap price",
+        "Quality",
+        "Quantity",
+        "Brand name",
+        "Trend",
+        "Rarity"
+      ] 
+    },
+    {
+      "number": 3,
+      "type": "radio",
+      "text": "How much do you usually spend on shopping per month?",
+      "possible_answers": 
+      [
+        "$0 ~ $100",
+        "$100 ~ $500",
+        "$500 ~ $1000",
+        "$1000 ~ $2000",
+        "Much more than that!"
+      ]
+    },
+    {
+      "number": 4,
+      "type": "multi",
+      "text": "What shopping sites do you use?",
+      "possible_answers": 
+      [
+        "Amazon",
+        "eBay",
+        "Alibaba",
+        "Zappos",
+        "Blue Nile"
+      ]
+    },
+    {
+      "number": 5,
+      "type": "multi",
+      "text": "What interests you?",
+      "possible_answers": 
+      [
+        "Clothing, shoes, and accessories",
+        "Health and beauty",
+        "Personal electronics",
+        "Games, movies, and music",
+        "Jewelry, gems, and watches"
+      ]
+    },
+    {
+      "number": 6,
+      "type": "radio",
+      "text": "What comprises your shopping list the most?",
+      "possible_answers": 
+      [
+        "Holiday and birthday gifts",
+        "Food",
+        "Sports & outdoors gears",
+        "Home improvement tools",
+        "Handmade products"
+      ]
+    }
+  ]
+}
