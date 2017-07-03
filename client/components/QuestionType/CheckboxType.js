@@ -9,8 +9,6 @@ export default class CheckboxType extends Component {
       prevAns.indexOf(answer_id) >= 0 
         ? prevAns.splice(prevAns.indexOf(answer_id), 1) 
         : prevAns.push(answer_id)
-      //Delete key if uncheck a question back to unanswered state
-      if (prevAns.length === 0) delete picked_answers[question_id];
     } else {
       picked_answers[question_id] = [answer_id];
     }

@@ -17,7 +17,7 @@ export default class SurveyBoard extends Component {
     if (this.props.survey_status === 'pending') {
       this.retrieveUserAnswers(this.props.user_id);
     } else {
-      this.getSurvey(this.props.user_id);
+      this.getSurvey();
     }
   }
 
@@ -26,7 +26,6 @@ export default class SurveyBoard extends Component {
     jQuery.ajax({
       method: "GET",
       url: '/getSurvey',
-      data: {user: user_id},
       success: (result) => {
         if (typeof result == 'object') {
           this.setState({ surveyArray: result, totalQuestions: result.length});
@@ -53,7 +52,7 @@ export default class SurveyBoard extends Component {
       error: (err) => {
         console.log('Error in retrieving answers', err);
       }
-    }).then(this.getSurvey(this.props.user_id));
+    }).then(this.getSurvey());
   };
 
   //Save user's answers to DB
@@ -91,7 +90,13 @@ export default class SurveyBoard extends Component {
   //Hash user's answers to picked_answers (key: question_id, value: answer_id)
   handleAnswer = (picked_answers) => {
     this.setState({ picked_answers });
-    if (Object.keys(picked_answers).length === this.state.totalQuestions) {
+
+    //If user's answers
+    if (Object.keys(picked_answers).length === this.state.totalQuestions
+      && Object.keys(picked_answers)
+      .filter((key) => picked_answers[key].length > 0)
+      .length === this.state.totalQuestions
+    ) {
       this.setState({ complete : true });
     } else {
       this.setState({ complete : false });

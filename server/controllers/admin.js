@@ -33,6 +33,6 @@ module.exports.updateSurvey = function() {
   console.log('Survey to DB');
   var name = 'z_fashion_v1';
   Survey.create({name: name, published: true}, function(err, survey) {
-    if (!err) console.log("New survey is created: ", survey)
+    if (!err) console.log("New survey is created: ", survey);
   });
 }
