@@ -69,12 +69,12 @@ export default class Home extends Component {
 
         {!this.state.loggedIn && 
           <div className='auth'>
-            <Col sm={6}>
+            <Col sm={6} className='login'>
               <Login 
                 approveLogin={this.approveLogin} 
               />
             </Col>
-            <Col sm={6} style={{borderLeft: '1px solid #9d9d99'}}>
+            <Col sm={6} className='signup'>
               <Signup
                 approveLogin={this.approveLogin} 
               />

@@ -5,7 +5,34 @@ var Question = require('../../models/question'),
     Answer = require('../../models/answer'),
     Survey = require('../../models/survey');
 
+//Test
+module.exports.createSurvey = function() {
+  Question.create(v1.z_fashion_v1, function(err, questions) {
+    if (err) {
+      console.log(err);
+    }
+    Survey.create({
+      name: 'z_fashion_v1',
+      published: true,
+      questions: questions
+    }, function(err, survey) {
+      console.log(survey);
+      questions.forEach((question, idx) => {
+        Answer.create(v1[idx].answers, function(err, answers) {
+          question.update({ answers: answers })
+        });
+      })
+    });
+  })
+}
 
+module.exports.clean = function() {
+  Question.remove({}, function(err, count) {
+    console.log('deleted', count);
+  })
+}
+
+//Prod
 module.exports.updateQuestions = function() {
   console.log('Questions to DB');
   var name = 'z_fashion_v1';

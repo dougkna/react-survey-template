@@ -54,38 +54,44 @@ export default class Login extends Component{
 	render() {
 		return (
 			<div className='login'>
-			  <Form className="login" horizontal onSubmit={this.handleSubmit}>
+			  <Form className="login-form" horizontal onSubmit={this.handleSubmit}>
 			    <FormGroup controlId="formHorizontalUsername">
-			      <Col componentClass={ControlLabel} sm={3}>
-			        Email
-			      </Col>
-			      <Col sm={8}>
-			        <FormControl value={this.state.email} name="email" onChange={this.handleChange}/>
+            <Col sm={10} className='auth-text'>Log In</Col>
+			      <Col sm={10}>
+			        <FormControl 
+                value={this.state.email} 
+                name="email"
+                placeholder="email" 
+                onChange={this.handleChange}
+              />
 			      </Col>
 			    </FormGroup>
 
 			    <FormGroup controlId="formHorizontalPassword">
-			      <Col componentClass={ControlLabel} sm={3}>
-			        Password
-			      </Col>
-			      <Col sm={8}>
-			        <FormControl type="password" value={this.state.password} name="password" onChange={this.handleChange}/>
+			      <Col sm={10}>
+			        <FormControl 
+                type="password" 
+                value={this.state.password} 
+                name="password" 
+                placeholder="password" 
+                onChange={this.handleChange}
+              />
 			      </Col>
 			    </FormGroup>
 		    	{this.state.error && (
-        		<Col smOffset={3}><Badge>Wrong email or password.</Badge></Col>
+        		<Badge>Wrong email or password.</Badge>
       		)}
 
 			    <FormGroup>
-			      <Col smOffset={3} sm={8}>
+			      <Col sm={10}>
 			        <Checkbox>Remember me</Checkbox>
 			      </Col>
 			    </FormGroup>
 
 			    <FormGroup>
-			      <Col smOffset={3} sm={8}>
+			      <Col sm={10}>
 			        <Button style={{width:"100%"}} bsStyle='primary' type="submit">
-			          Sign In
+			          Log In
 			        </Button>
 			      </Col>
 			    </FormGroup>

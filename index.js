@@ -32,8 +32,6 @@ start.updateQuestions();
 start.updateSurvey();
 
 
-
-
 var compress = require('compression');
 var layouts = require('express-ejs-layouts');
 

@@ -6,14 +6,14 @@
   "scripts": {
     "start": "node index",
     "dist": "cross-env NODE_ENV=production webpack -p --progress",
-    "postinstall": "npm run dist"
+    "postinstall": "npm run dist",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/dougkna/survey-app.git"
   },
   "engines": {
-    "node": "5",
     "npm": "3"
   },
   "author": "Doug K Na",
@@ -22,6 +22,7 @@
     "babel-polyfill": "6.3.14",
     "babel-runtime": "6.3.19",
     "body-parser": "1.17.2",
+    "chai": "4.0.2",
     "compression": "1.6.1",
     "cross-env": "1.0.7",
     "crypto": "0.0.3",
@@ -30,6 +31,7 @@
     "express-ejs-layouts": "2.0.0",
     "express-session": "1.15.2",
     "jquery": "3.2.1",
+    "mocha": "3.4.2",
     "mongoose": "4.10.8",
     "passport": "0.3.2",
     "passport-local": "1.0.0",
@@ -38,6 +40,7 @@
     "react-dom": "15.2.1",
     "react-router": "3.0.5",
     "request": "2.81.0",
+    "sinon": "2.3.6",
     "webpack": "1.12.12"
   },
   "devDependencies": {

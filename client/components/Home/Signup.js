@@ -52,11 +52,8 @@ export default class Signup extends Component {
           controlId="formBasicText"
           validationState={this.getValidationStateName()}
         >
-          <Col componentClass={ControlLabel} sm={3}>
-            First Name
-          </Col>
-
-          <Col sm={8}>
+          <Col smOffset={2} sm={10} className='auth-text'>Create Account</Col>
+          <Col smOffset={2} sm={10}>
             <FormControl
               type="text"
               value={this.state.first_name}
@@ -72,11 +69,8 @@ export default class Signup extends Component {
           controlId="formHorizontalEmail" 
           validationState={this.getValidationStateEmail()}
         >
-          <Col componentClass={ControlLabel} sm={3}>
-            Email
-          </Col>
 
-          <Col sm={8}>
+          <Col smOffset={2} sm={10}>
             <FormControl 
               type="email" 
               value={this.state.email} 
@@ -92,11 +86,8 @@ export default class Signup extends Component {
           controlId="formHorizontalPassword" 
           validationState={this.getValidationStatePassword()}
         >
-          <Col componentClass={ControlLabel} sm={3}>
-            Password
-          </Col>
 
-          <Col sm={8}>
+          <Col smOffset={2} sm={10}>
             <FormControl 
               type="password" 
               value={this.state.password} 
@@ -108,7 +99,7 @@ export default class Signup extends Component {
         </FormGroup>
 
         <FormGroup>
-          <Col smOffset={3} sm={8}>
+          <Col smOffset={2} sm={10}>
             <Button style={{width:"100%"}} bsStyle='primary' type="submit">
               Sign Up
             </Button>

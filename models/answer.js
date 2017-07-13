@@ -10,6 +10,16 @@ var answerSchema = new Schema({
   number: Number
 }, { timestamps: { createdAt: 'created_at' } });
 
+
+answerSchema.methods = {
+  getAllAnswers: function(q_id, cb) {
+    this.constructor.find({question_id: q_id}, function(err, answers) {
+      if (err) cb(err)
+      else cb(answers)
+    }.bind(this));
+  }
+}
+
 var Answer = mongoose.model("answer", answerSchema, "Answer");
 
 module.exports = Answer;

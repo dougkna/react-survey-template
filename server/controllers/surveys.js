@@ -33,8 +33,8 @@ function promptSurvey(id, callback) {
     else if (survey) {
       Question.find({survey_name: survey.name})
       .exec(function(err, questions) {
-        var processed = 0;
         var surveyArray = [];
+        var processed = 0;
         questions.forEach((q) => {
           Answer.find({question_id: q['_id']}, function(err, answers) {
             if (err) console.log('Error', err);
