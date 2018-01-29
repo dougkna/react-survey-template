@@ -51,7 +51,8 @@ Create a survey that :
 
 
 ### VIEW
-
 https://z-survey-app.herokuapp.com/
+
+![survey-template](https://user-images.githubusercontent.com/22410733/35532086-d6bb6590-04ed-11e8-98d8-2099ab079587.gif)
 
 
